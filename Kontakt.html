@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Kontakt | JS-Homes | Stavby a Rekonštrukcie</title>
+    <meta name="description" content="Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Sme k dispozícii na telefóne, emaile alebo osobne v našej kancelárii.">
+    <meta name="keywords" content="kontakt, stavebné práce, konzultácia, cenová ponuka, JS-Homes">
+    <meta name="author" content="JS-Homes">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://js-homes.sk/kontakt">
+    <meta property="og:title" content="Kontakt | JS-Homes">
+    <meta property="og:description" content="Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Sme k dispozícii na telefóne, emaile alebo osobne v našej kancelárii.">
+    <meta property="og:image" content="https://js-homes.sk/images/logo-js-homes.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://js-homes.sk/kontakt">
+    <meta property="twitter:title" content="Kontakt | JS-Homes">
+    <meta property="twitter:description" content="Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku. Sme k dispozícii na telefóne, emaile alebo osobne v našej kancelárii.">
+    <meta property="twitter:image" content="https://js-homes.sk/images/logo-js-homes.png">
+
+    <!-- ======== CSS ========= -->
+    <link rel="stylesheet" href="styly.css" />
+    <link rel="stylesheet" href="others/grid.css" />
+    <link rel="icon" href="images/povelania-stavba-projekt.jpg">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="script.js" defer></script>
+    <script src="cookies.js" defer></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Kontakt",
+      "description": "Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku",
+      "url": "https://js-homes.sk/kontakt",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+421918477662",
+        "contactType": "customer service",
+        "email": "suplatajaroslav@gmail.com",
+        "areaServed": "SK",
+        "availableLanguage": ["sk"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ekoosada 3201/795B",
+        "addressLocality": "Veľké Úľany",
+        "addressCountry": "SK"
+      }
+    }
+    </script>
+
+    <!-- ===== Bootstrap CSS ======== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <span class="logo"><a href="index.html"><img src="images/logo JS homes.png" alt="" /></a></span>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="bi bi-list" style="font-size: 2rem"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="Rozsah prac.html">Rozsah prác</a></li>
+        <li><a href="Referencie.html">Referencie</a></li>
+        <li><a class="active" href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <section class="kontakt-info">
+        <div class="heading-kontakt row">
+          <!-- <h2>Kontaktujte nas</h2> -->
+          <div class="heading-uvod row">
+            <h2>Kontaktujte nas</h2>
+        </div>
+          <p>
+            Ak Vás zaujala naša ponuka, kontaktujte nás a my Vám zabezpečíme
+            komplexné práce, ktoré zmenia Váš domov. <br />
+            Kontaktujte nás v čase od 08.00 do 17.00 každý pracovný deň. <br />
+            <br />
+            Tešíme sa na úspešnú spoluprácu!
+          </p>
+        </div>
+
+        <div class="container">
+          <div class="nazov-firmy">
+            <div class="box">
+              <div class="icon"><i class="bi bi-geo-alt"></i></div>
+              <div class="text">
+                <h3>Addresess:</h3>
+                <p>
+                  Jaroslav Šuplata <br />
+                  Veľké Úľany <br />
+                  Ekoosada 3201/795B
+                </p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="bi bi-phone"></i></div>
+              <div class="text">
+                <h3>Phone:</h3>
+                <p>+421 918 477 662</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="bi bi-envelope-at"></i></div>
+              <div class="text">
+                <h3>Email:</h3>
+                <p>suplatajaroslav@gmail.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="heading-uvod row">
+            <form id="contactForm" class="contact-form row">
+              <h2>Napíšte nám</h2>
+
+              <div class="inputBox">
+                <input type="text" name="Meno" placeholder="Meno" required/><br />
+                <input type="text" name="Priezvisko" placeholder="Priezvisko" required/><br />
+                <input type="email" name="Email" placeholder="Email" required/><br />
+                <textarea
+                  name="Správa"
+                  cols="30"
+                  rows="10"
+                  placeholder="Vaša Správa"
+                  required
+                ></textarea><br />
+
+                <input type="submit" value="ODOSLAŤ" class="submit-btn" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JS-Homes</h3>
+                <p>Stavby na mieru.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p><i class="bi bi-envelope"></i> suplatajaroslav@gmail.com</p>
+                <p><i class="bi bi-telephone"></i> +421 918 477 662</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61567471471902" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/js.homes.sk" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>JS-Homes s.r.o., Ekoosada 3201/795B, Veľké Úľany</p>
+            <p>&copy; 2024 JS-Homes. Všetky práva vyhradené.</p>
+            <div class="footer-links">
+                <a href="ochrana-udajov.html">Ochrana osobných údajov</a>
+                <a href="podmienky-pouzivania.html">Podmienky používania</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        fetch('send_email.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                window.location.href = 'thank-you.html';
+            } else {
+                alert(data.error || 'Nastala chyba pri odosielaní správy');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Nastala chyba pri odosielaní správy: ' + error.message);
+        });
+    });
+    </script>
+  </body>
+</html>

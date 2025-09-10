@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ======== CSS ========= -->
+    <link rel="stylesheet" href="styly.css" />
+    <link rel="icon" href="images/povelania-stavba-projekt.jpg" />
+    <script src="script.js" defer></script>
+
+    <!-- ===== Bootstrap CSS ======== -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <title>Suplata_01</title>
+  </head>
+  <body>
+    <nav>
+      <span class="logo"
+        ><a href="index.html"><img src="images/logo JS homes.png" alt="" /></a
+      ></span>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="bi bi-list" style="font-size: 2rem"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li><a href="Rozsah prac.html">Rozsah prác</a></li>
+        <li><a class="active" href="Referencie.html">Referencie</a></li>
+        <li><a href="Kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+
+    <!-- Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <div class="cookie-content">
+        <p>Táto webová stránka používa cookies na zlepšenie vášho zážitku. Pokračovaním v prehliadaní súhlasíte s používaním cookies.</p>
+        <div class="cookie-buttons">
+          <button onclick="acceptCookies()" class="cookie-btn accept">Prijať všetky</button>
+          <button onclick="rejectCookies()" class="cookie-btn reject">Odmietnuť</button>
+          <button onclick="showCookieSettings()" class="cookie-btn settings">Nastavenia</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <aside class="sidebar">
+        <div class="logo">&#8734;</div>
+    </aside> -->
+
+    <main class="main">
+      <section class="uvod">
+        <div class="heading-uvod row">
+          <h2>Referencie</h2>
+        </div>
+      </section>
+
+      <div class="gallery">
+        <figure>
+          <img src="images/Cierna Voda_1.jpg"dolor sit amet" />
+          <figcaption>
+            <h3>Čierna Voda</h3>
+            <p>Aubust 2025</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/3.jpg" alt="dolor sit amet" />
+          <figcaption>
+            <h3>Rovinka</h3>
+            <p>August 2024</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/Cierna Voda.jpg"dolor sit amet" />
+          <figcaption>
+            <h3>Čierna Voda</h3>
+            <p>September 2025</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/8.jpg" alt="dolor sit amet" />
+          <figcaption>
+            <h3>Jelka</h3>
+            <p>Januar 2025</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/Odpad_Senec.jpg"dolor sit amet" />
+          <figcaption>
+            <h3>Senec</h3>
+            <p>Marec 2025</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/6.jpg" alt="dolor sit amet" />
+          <figcaption>
+            <h3>Velke Uľany</h3>
+            <p>Marec 2024</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/worker-gloves.jpg" alt="dolor sit amet" />
+          <figcaption>
+            <h3>Senec</h3>
+            <p>Jul 2025</p>
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/worker-stones.jpg" alt="dolor sit amet" />
+          <figcaption>
+            <h3>Senec</h3>
+            <p>Jul 2025</p>
+          </figcaption>
+        </figure>
+        <!-- <figure>
+            <img src="images/Stavba-sauny1.jpg" alt="dolor sit amet">
+            <figcaption>
+                <h3>Batizovce</h3>
+                <p>Marec 2024</p>
+            </figcaption>
+            </figure>  -->
+      </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>JS-Homes</h3>
+                <p>Stavby na mieru.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p><i class="bi bi-envelope"></i> suplatajaroslav@gmail.com</p>
+                <p><i class="bi bi-telephone"></i> +421 918 477 662</p>
+            </div>
+            <div class="footer-section">
+                <h3>Sledujte nás</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61567471471902" target="_blank" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/js.homes.sk" target="_blank" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>JS-Homes s.r.o., Ekoosada 3201/795B, Veľké Úľany</p>
+            <p>&copy; 2024 JS-Homes. Všetky práva vyhradené.</p>
+            <div class="footer-links">
+                <a href="ochrana-udajov.html">Ochrana osobných údajov</a>
+                <a href="podmienky-pouzivania.html">Podmienky používania</a>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>

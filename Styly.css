@@ -1,0 +1,1113 @@
+/***********Google font Poppins Pismo*********/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Audiowide",sans-serif;
+  /* max-width: 1280px; */
+}
+
+.row {
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Colors */
+
+:root {
+  --body-color: #b39a29e6;
+  --nav-color: #82722be6;
+  --side-nav: #010718;
+  --text-color: #fff;
+  --search-bar: #f2f2f2;
+  --search-text: #010718;
+}
+
+/***********Hlavna Strana Index********/
+
+/*****************Toolbar**********/
+
+/*****header*****/
+
+/* Štandardné pozadie pre všetky stránky okrem hlavnej */
+body {
+  height: 100%;
+  background: linear-gradient(rgba(179, 154, 41, 0.9), rgba(179, 154, 41, 0.9)), url('images/Nakres_Dom.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--body-color);
+}
+
+/* Špeciálne pozadie len pre hlavnú stránku */
+body.home-page {
+  height: 100%;
+  background: linear-gradient(rgba(179, 154, 41, 0.9));
+  background-size: cover;
+  background-color: var(--body-color);
+}
+
+/* Hlavný obrázok na hlavnej stránke */
+.uvodne-foto {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.uvodne-foto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+/******* Navigace********/
+
+nav {
+  height: 70px;
+  background: var(--nav-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  position: relative;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: auto;
+  height: 40px;
+  margin: 15px;
+  padding-top: 5px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  border-radius: 7px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--body-color);
+}
+
+#click {
+  display: none;
+}
+
+.menu-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-btn i {
+  color: var(--text-color);
+  font-size: 2rem;
+}
+
+@media (max-width: 832px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: var(--nav-color);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    opacity: 0.95;
+  }
+
+  #click:checked ~ ul {
+    left: 0;
+    opacity: 1;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: var(--text-color);
+  }
+
+  /* Add padding to body to prevent content from being hidden under fixed nav */
+  body {
+    padding-top: 70px;
+  }
+}
+
+/**********Hlavna strana**********/
+
+
+/*********** referencie **********/
+
+img {
+  max-inline-size: 100%;
+}
+
+/* body {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #070707;
+  background-color: #fff;
+
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  min-block-size: 100svh;
+
+  display: grid;
+  grid-template-columns: 
+  [sidebar-start]
+     5rem
+  [sidebar-end main-start]
+     1fr
+     [main-end];
+} */
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  margin-block-end: 1rem;
+}
+
+.sidebar {
+  grid-column: sidebar-start / sidebar-end;
+  color: #fff;
+  background-color: #1d1d29;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.main {
+  grid-column: main-start / main-end;
+  padding: 1.25rem;
+}
+
+    /* Photo Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: 
+        repeat(auto-fit, minmax(12.5rem, 1fr));
+      grid-auto-rows: 12.5rem;
+      grid-auto-flow: dense;
+      gap: 0.75rem;
+    }
+
+.gallery figure {
+  /* container-type: inline-size; */
+  container: figure / inline-size;
+  overflow: hidden;
+
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  /* grid-template-rows: 1fr; */
+
+  /* 
+  Because 1fr = minmax(auto, 1rf),
+  to prevent the grid blowout,
+  set the minimum to zero.
+   */
+   grid-template-columns: minmax(0, 1fr);
+   grid-template-rows: minmax(0, 1fr);
+}
+
+.gallery img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+
+  /* grid-column: 1 / -1; */
+  /* grid-row: 1 / -1; */
+  grid-area: 1 / 1 / -1 / -1;
+
+  transition: scale 1s ease-in-out;
+}
+
+.gallery figure:hover img {
+  scale: 1.125;
+}
+
+.gallery figcaption {
+  grid-area: 1 / 1 / -1 / -1;
+  align-self: end;
+  z-index: 1;
+
+  padding: 3em 15% 1em 1em;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  background: linear-gradient(
+    transparent 25%,
+    rgba(0 0 0 / 0.75)
+  );
+  display: none;
+}
+
+@container figure (width > 20px) {
+  nav .hamburger {
+    display: block;
+  }
+  .gallery figcaption {
+    display: block;
+  }
+}
+
+.gallery figcaption h3 {
+  font-size: 1.0625rem;
+}
+
+.gallery figcaption p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (width > 600px) {
+  .gallery figure:nth-child(1) {
+    grid-area: span 2 / span 2;
+ }
+
+ .gallery figure:nth-child(4n+1) {
+   grid-row: span 2;
+ }
+
+ .gallery figure:nth-child(4n+2) {
+   grid-column: span 2;
+ }
+}
+
+/****Galery****/
+/* .heading-main h2 {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.heading-main h2:after {
+content: "";
+max-width: 250px;
+border-bottom: 2px solid #272E33 ;
+margin: 7px 35px;
+}
+
+.Galery img {
+max-width: 350px;
+height: 125px;
+margin-top: 25px;
+border-radius: 7px;
+box-shadow: 5px 5px 8px black;
+top: 20%;
+
+}
+
+.photo-segment li {
+list-style-type: none,;
+overflow: hidden;
+height: 80px;
+}
+
+.photo-segment img {
+opacity: 0.8;
+transform: scale(1.05);
+}
+
+.photo-segment img:hover {
+transition: transform 0.5s, opacity 0.5s;
+transform: scale(1);
+opacity: 1;
+} */
+
+/***********Button ************/
+.cenova {
+  padding: 15px 0px 50px 0px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cenova button {
+  padding: 7px;
+  font-size: 25px;
+  background-color: var(--nav-color);
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px #272e33;
+  cursor: pointer;
+  transition: all 0.3 ease;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.cenova button:hover {
+  background-color: var(--body-color);
+  text-decoration: none;
+}
+
+/**********Main-Uvod*********/
+
+.heading-uvod h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 35px;
+  color: var(--search-text);
+}
+
+.heading-uvod h2:after {
+  content: "";
+  display: block;
+  max-width: 250px;
+  border-bottom: 2px solid var(--search-text);
+  margin: 2px auto;
+}
+.heading-uvod p {
+  padding: 15px 25px 45px 25px;
+  margin-top: 15px;
+  font-size: 23px;
+  font-family: Audiowide, sans-serif;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 2px 2px #817373;
+}
+/******** RozsahPrac ************/
+.about-us.row {
+  display: flex;
+  flex-direction: row; /* Toto je predvolené nastavenie */
+  gap: 16px; /* Medzera medzi položkami */
+  justify-content: space-between; /* Rozmiestnenie položiek */
+  align-items: center; /* Zarovnanie položiek vertikálne */
+}
+.about-us img {
+  width: 50%;
+  height: auto;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px #272e33;
+  margin-top: 20px;
+  margin-left: 55px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-text li {
+  /* list-style-type: none; */
+  font-size: 32px;
+  font-weight: 300;
+  color: var(--text-color);
+  /* margin-top: 20px; */
+  margin-left: 18px;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-text h2 {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--search-text);
+}
+
+@media (max-width: 832px){
+  .about-us.row {
+    flex-direction: column;
+  }
+  .about-us img {
+    width: 60%;
+    /* margin-bottom: 10px; */
+    align-items: center;
+    justify-content: center;
+  }
+  .about-text {
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 5px 0px 20px 55px; */
+    margin-left: 30px;
+  }
+}
+
+/*******kontakt*****/
+.kontakt-info {
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgba(179, 154, 41, 0.9)),
+    url(images/Nakres_Dom.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.kontakt-info .heading-kontakt {
+  max-width: 100%;
+  text-align: center;
+}
+
+
+.kontakt-info .heading-kontakt h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: var(--search-text);
+  padding-bottom: 25px;
+  padding-right: 100px;
+}
+.kontakt-info .heading-kontakt p {
+  font-weight: 300;
+  font-size: 22px;
+  color: #fff;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .nazov-firmy {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.container .nazov-firmy .box {
+  position: relative;
+  padding: 15px 0;
+  display: flex;
+}
+.container .nazov-firmy .box .icon {
+  min-width: 45px;
+  height: 45px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container .nazov-firmy .box .text {
+  display: flex;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.container .nazov-firmy .box .text h3 {
+  font-weight: 500;
+  color: var(--search-text);
+}
+
+.contact-form {
+  width: 100%;
+  padding: 40px;
+  text-align: right;
+  margin-right: 115px;
+}
+.contact-form h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contact-form .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contact-form .inputBox input,
+.contact-form .inputBox textarea {
+  width: 100%;
+  padding: 7px;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contact-form .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form input {
+  width: 80%;
+  margin: 5px 0px;
+  padding: 7px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.contact-form textarea {
+  width: 80%;
+  margin: 5px 0px;
+  padding: 7px;
+  border: 2px solid #000;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px grey;
+  font-family: Arial;
+}
+
+.contact-form .inputBox input[type="submit"] {
+  /* width: 100px; */
+  background-color: rgba(130, 114, 43, 0.902);
+  color: azure;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form .inputBox input[type="submit"]:hover {
+  color: #000;
+}
+
+@media (max-width: 832px) {
+  .kontakt-info {
+    padding: 30px 20px;
+  }
+
+  .kontakt-info .heading-kontakt h2 {
+    font-size: 28px;
+    padding-bottom: 15px;
+    padding-right: 0;
+  }
+
+  .kontakt-info .heading-kontakt p {
+    font-size: 18px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .container .nazov-firmy {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .container .nazov-firmy .box {
+    padding: 10px 0;
+  }
+
+  .container .nazov-firmy .box .icon {
+    min-width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .container .nazov-firmy .box .text {
+    font-size: 16px;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 20px;
+    margin-right: 0;
+  }
+
+  .contact-form h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .contact-form .inputBox input,
+  .contact-form .inputBox textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .contact-form input[type="submit"] {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+/* @media (max-width: 832px) {
+  .about-us {
+    margin-bottom: 20px;
+  }
+
+  .about-us.row {
+    flex-direction: column;
+  }
+  .contact {
+    padding: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+  .container .contact-form {
+    margin-right: 0;
+  }
+  .container .kontakt-info {
+    margin-bottom: 30px;
+    
+  }
+  .container .kontakt-info {
+    width: 100%;
+  }
+} */
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+.footer-section:first-child {
+    text-align: left;
+}
+
+.footer-section:last-child {
+    text-align: right;
+}
+
+.footer-section h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section:first-child p {
+    justify-content: flex-start;
+}
+
+.footer-section:nth-child(2) p {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.footer-section:last-child p {
+    justify-content: flex-end;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--body-color);
+}
+
+.social-links i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding: 1rem;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--body-color);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        text-align: center !important;
+    }
+
+    .footer-section p {
+        justify-content: center !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+    }
+}
+
+/* Cookie Banner Styles */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cookie-banner.show {
+    display: flex;
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex: 1;
+    font-size: 14px;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cookie-btn.accept {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cookie-btn.reject {
+    background-color: #f44336;
+    color: white;
+}
+
+.cookie-btn.settings {
+    background-color: #2196F3;
+    color: white;
+}
+
+.cookie-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Cookie Settings Modal Styles */
+#cookie-settings {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    max-width: 500px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.cookie-settings-content {
+    color: #333;
+}
+
+.cookie-settings-content h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.cookie-option {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.cookie-option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.cookie-option label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.cookie-option p {
+    margin: 5px 0 0 0;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.cookie-settings-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.cookie-btn.save {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+.cookie-btn.close {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Overlay for cookie settings */
+#cookie-settings::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    backdrop-filter: blur(3px);
+}
+
+/* Animation for modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#cookie-settings {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .cookie-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #cookie-settings {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Privacy Policy Section Styles */
+.heading-ochrana_udajov {
+    max-width: 800px;
+    margin: 35px auto;
+    padding: 1.5rem;
+    text-align: left;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heading-ochrana_udajov h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.heading-ochrana_udajov section {
+    margin-bottom: 2rem;
+}
+
+.heading-ochrana_udajov p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.heading-ochrana_udajov ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.heading-ochrana_udajov li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .heading-ochrana_udajov {
+        margin: 35px 15px;
+        padding: 1.5rem 1rem;
+    }
+
+    .heading-ochrana_udajov h1 {
+        font-size: 1.5rem;
+        padding: 0 1rem 10px 1rem;
+    }
+
+    .heading-ochrana_udajov section {
+        padding: 0 1rem;
+    }
+
+    .heading-ochrana_udajov p,
+    .heading-ochrana_udajov ul {
+        padding: 0 1rem;
+    }
+}
